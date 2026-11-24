@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prawo jazdy kat. A lub B w Krakowie – OSK Zdzich (projekt edukacyjny)</title>
+    <meta name="description" content="Kurs prawa jazdy kat. A lub B w Krakowie: teoria, jazdy i materiały w jednej cenie. Strona demonstracyjna – projekt edukacyjny, fikcyjna oferta.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body id="top">
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <!-- Menu boczne (na telefonie: pasek u góry) z efektem glass -->
+    <nav class="glass-sidebar" aria-label="Menu główne">
+        <a href="#top" class="logo-container" id="logoContainer" title="Wróć na górę">
+            <img src="assets/Neonowy emblemat OSK Zdzich z autem.png" alt="OSK Zdzich Logo" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#oferta" class="nav-link">Oferta</a></li>
+            <li><a href="#w-cenie" class="nav-link">W cenie</a></li>
+            <li><a href="#lead-form" class="nav-link">Zapisz się</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content" id="main">
+
+        <!-- 1. HERO -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-subtitle">OSK Zdzich • Kraków • Vice City Style</p>
+                    <h1 class="hero-title" id="hero-title">Prawo jazdy kat. A lub B w Krakowie</h1>
+                    <p class="hero-lead">Teoria, jazdy i materiały w jednej cenie. Zgłoszenie zajmuje minutę, a rejestracja odbywa się bez poufnych danych.</p>
+                    <a href="#lead-form" class="gta-btn hero-btn" id="cta-hero" data-cta-location="hero">Zapisz się na kurs</a>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="assets/Neonowy plakat szkoły jazdy OSK Zdzich.png" alt="Plakat reklamowy OSK Zdzich – prawo jazdy w Krakowie" class="hero-poster" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. OFERTA (sekcja mierzona) -->
+        <section class="gta-section" id="oferta" aria-labelledby="oferta-title">
+            <h2 class="gta-title" id="oferta-title">Wybierz wariant kursu</h2>
+            <p class="gta-text">Trzy warianty nauki teorii. Kategorię A lub B wybierzesz w formularzu.</p>
+
+            <div class="cards-container">
+                <article class="gta-card">
+                    <h3>Wykłady</h3>
+                    <p class="card-price">Cena: od 2 900 zł</p>
+                    <p class="card-desc">Teoria na wykładach stacjonarnych w ośrodku.</p>
+                    <p class="card-note">Kategoria A / B – wybór w formularzu</p>
+                </article>
+                <article class="gta-card">
+                    <h3>E-learning</h3>
+                    <p class="card-price">Cena: od 2 700 zł</p>
+                    <p class="card-desc">Teoria online, w dogodnym dla Ciebie czasie.</p>
+                    <p class="card-note">Kategoria A / B – wybór w formularzu</p>
+                </article>
+                <article class="gta-card">
+                    <h3>Eksternistyczny</h3>
+                    <p class="card-price">Cena: od 2 500 zł</p>
+                    <p class="card-desc">Wariant dla osób uczących się teorii samodzielnie.</p>
+                    <p class="card-note">Kategoria A / B – wybór w formularzu</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. CO JEST W CENIE + OBIEKCJA (CTA 2) -->
+        <section class="gta-section" id="w-cenie" aria-labelledby="w-cenie-title">
+            <h2 class="gta-title" id="w-cenie-title">Co jest w cenie?</h2>
+            <ul class="price-list">
+                <li>Teoria</li>
+                <li>Jazdy</li>
+                <li>Materiały do nauki</li>
+            </ul>
+            <p class="gta-text">Czy to dużo formalności? Na start podajesz tylko imię, telefon, wariant i kategorię – bez poufnych danych. Resztę szkoła omówi z Tobą po kontakcie.</p>
+            <a href="#lead-form" class="gta-btn" id="cta-oferta" data-cta-location="oferta">Zapisz się na kurs</a>
+        </section>
+
+        <!-- 4. FORMULARZ -->
+        <section class="gta-section form-section" aria-labelledby="form-title">
+            <h2 class="gta-title" id="form-title">Zapisz się na kurs</h2>
+            <p class="gta-text subtitle-form">Krótki formularz demonstracyjny. Dane są wyłącznie fikcyjne i nie są nigdzie wysyłane.</p>
+
+            <form class="registration-form" id="lead-form" novalidate>
+                <p class="required-note">Pola oznaczone <span class="req" aria-hidden="true">*</span><span class="visually-hidden">gwiazdką</span> są wymagane.</p>
+
+                <div id="form-error-summary" class="form-error-summary" role="alert" hidden></div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Imię <span class="req" aria-hidden="true">*</span></label>
+                        <input type="text" id="fullName" name="fullName" placeholder="np. Jan" autocomplete="given-name" required aria-required="true" aria-describedby="err-fullName">
+                        <p class="field-error" id="err-fullName"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon <span class="req" aria-hidden="true">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789" inputmode="tel" autocomplete="tel" required aria-required="true" aria-describedby="err-phone">
+                        <p class="field-error" id="err-phone"></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="variant">Wariant kursu <span class="req" aria-hidden="true">*</span></label>
+                    <select id="variant" name="variant" required aria-required="true" aria-describedby="err-variant">
+                        <option value="">Wybierz wariant</option>
+                        <option value="Wykłady">Wykłady</option>
+                        <option value="E-learning">E-learning</option>
+                        <option value="Eksternistyczny">Eksternistyczny</option>
+                    </select>
+                    <p class="field-error" id="err-variant"></p>
+                </div>
+
+                <fieldset class="form-group category-group" aria-describedby="err-category">
+                    <legend>Kategoria <span class="req" aria-hidden="true">*</span></legend>
+                    <div class="options-grid">
+                        <label class="radio-card">
+                            <input type="radio" name="category" value="A" class="visually-hidden" required>
+                            <span class="radio-title">Kategoria A</span>
+                            <span class="radio-desc">Motocykl</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="category" value="B" class="visually-hidden" required>
+                            <span class="radio-title">Kategoria B</span>
+                            <span class="radio-desc">Samochód osobowy</span>
+                        </label>
+                    </div>
+                    <p class="field-error" id="err-category"></p>
+                </fieldset>
+
+                <div class="form-group consent-group">
+                    <label class="consent-label" for="consent">
+                        <input type="checkbox" id="consent" name="consent" required aria-required="true" aria-describedby="err-consent">
+                        <span>Zgoda na kontakt w sprawie zapisu na kurs <span class="req" aria-hidden="true">*</span></span>
+                    </label>
+                    <p class="field-error" id="err-consent"></p>
+                </div>
+
+                <button type="submit" class="gta-btn" id="submit-btn">Wyślij</button>
+
+                <p class="what-next"><strong>Co dalej?</strong> Po zgłoszeniu szkoła skontaktuje się z Tobą i omówi pozostałe formalności. W tej demonstracji nic nie jest wysyłane.</p>
+
+                <div id="form-success" class="form-success" role="status" aria-live="polite" hidden></div>
+            </form>
+        </section>
+
+        <!-- 5. STOPKA -->
+        <footer class="site-footer">
+            <p>Projekt edukacyjny / demonstracja – oferta jest fikcyjna.</p>
+            <p class="footer-small">Strona wykorzystuje narzędzia pomiarowe: Google Analytics 4, Meta i Microsoft Clarity. Działają wyłącznie na podstawie Twojej zgody, którą możesz zmienić w dowolnym momencie.</p>
+            <button type="button" class="footer-btn" id="zmien-zgody">Zmień ustawienia zgód</button>
+            <p class="footer-small" id="consent-status" role="status" aria-live="polite"></p>
+            <p class="footer-small">Zdzich 2026</p>
+        </footer>
+    </main>
+</body>
+</html>
